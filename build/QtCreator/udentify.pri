@@ -21,7 +21,7 @@
 # build specific QtCreator project .pri file for framework udentify
 ########################################################################
 # Repository Depends: vmachinae
-# Depends: ubn;ump;urostra;unadir;ufila;ucrono;ucifra;urete;ustara;umedusade;utalas
+# Depends: ubn;ump;urostra;unadir;ufila;ucrono;ucifra;urete;ustara;umedusade;utalas;udentity
 
 contains(BUILD_OS,Uname) {
 UNAME = $$system(uname)
@@ -291,11 +291,34 @@ build_utalas_FRAMEWORKS += \
 build_utalas_LIBS += \
 
 ########################################################################
+# udentity
+#
+# pkg-config --cflags --libs udentity
+#
+
+# build udentity INCLUDEPATH
+#
+build_udentity_INCLUDEPATH += \
+
+# build udentity DEFINES
+#
+build_udentity_DEFINES += \
+
+# build udentity FRAMEWORKS
+#
+build_udentity_FRAMEWORKS += \
+
+# build udentity LIBS
+#
+build_udentity_LIBS += \
+
+########################################################################
 # udentify
 
 # build udentify INCLUDEPATH
 #
 build_udentify_INCLUDEPATH += \
+$${build_udentity_INCLUDEPATH} \
 $${build_utalas_INCLUDEPATH} \
 $${build_umedusade_INCLUDEPATH} \
 $${build_ustara_INCLUDEPATH} \
@@ -323,11 +346,13 @@ $${build_urete_DEFINES} \
 $${build_ustara_DEFINES} \
 $${build_umedusade_DEFINES} \
 $${build_utalas_DEFINES} \
+$${build_udentity_DEFINES} \
 
 
 # build udentify FRAMEWORKS
 #
 build_udentify_FRAMEWORKS += \
+$${build_udentity_FRAMEWORKS} \
 $${build_utalas_FRAMEWORKS} \
 $${build_umedusade_FRAMEWORKS} \
 $${build_ustara_FRAMEWORKS} \
@@ -344,6 +369,7 @@ $${build_ubn_FRAMEWORKS} \
 # build udentify LIBS
 #
 build_udentify_LIBS += \
+$${build_udentity_LIBS} \
 $${build_utalas_LIBS} \
 $${build_umedusade_LIBS} \
 $${build_ustara_LIBS} \

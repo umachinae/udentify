@@ -21,7 +21,7 @@
 # os specific QtCreator project .pri file for framework udentify
 ########################################################################
 # Repository Depends: vmachinae
-# Depends: ubn;ump;urostra;unadir;ufila;ucrono;ucifra;urete;ustara;umedusade;utalas
+# Depends: ubn;ump;urostra;unadir;ufila;ucrono;ucifra;urete;ustara;umedusade;utalas;udentity
 
 UNAME = $$system(uname)
 
@@ -326,6 +326,29 @@ utalas_LIBS += \
 -l$${UTALAS_LIB_NAME} \
 
 ########################################################################
+# udentity
+UDENTITY_THIRDPARTY_PKG_MAKE_BLD = $${UDENTITY_THIRDPARTY_PKG}/build/$${UDENTIFY_BUILD}/$${BUILD_CONFIG}
+UDENTITY_THIRDPARTY_PRJ_MAKE_BLD = $${OTHER_BLD}/$${UDENTITY_THIRDPARTY_PRJ}/build/$${UDENTIFY_BUILD}/$${BUILD_CONFIG}
+UDENTITY_THIRDPARTY_PKG_BLD = $${UDENTITY_THIRDPARTY_PKG}/build/$${UDENTIFY_BUILD}/QtCreator/$${BUILD_CONFIG}
+UDENTITY_THIRDPARTY_PRJ_BLD = $${OTHER_BLD}/$${UDENTITY_THIRDPARTY_PRJ}/build/$${UDENTIFY_BUILD}/QtCreator/$${BUILD_CONFIG}
+UDENTITY_PKG_BLD = $${OTHER_BLD}/$${UDENTITY_PKG}/build/$${UDENTIFY_BUILD}/QtCreator/$${BUILD_CONFIG}
+UDENTITY_PRJ_BLD = $${OTHER_BLD}/$${UDENTITY_PRJ}/build/$${UDENTIFY_BUILD}/QtCreator/$${BUILD_CONFIG}
+#UDENTITY_LIB = $${UDENTITY_THIRDPARTY_PKG_MAKE_BLD}/lib
+#UDENTITY_LIB = $${UDENTITY_THIRDPARTY_PRJ_MAKE_BLD}/lib
+#UDENTITY_LIB = $${UDENTITY_THIRDPARTY_PKG_BLD}/lib
+#UDENTITY_LIB = $${UDENTITY_THIRDPARTY_PRJ_BLD}/lib
+UDENTITY_LIB = $${UDENTITY_PKG_BLD}/lib
+#UDENTITY_LIB = $${UDENTITY_PRJ_BLD}/lib
+#UDENTITY_LIB = $${UDENTIFY_LIB}
+UDENTITY_LIB_NAME = $${UDENTITY_NAME}
+
+# udentity LIBS
+#
+udentity_LIBS += \
+-L$${UDENTITY_LIB}/lib$${UDENTITY_LIB_NAME} \
+-l$${UDENTITY_LIB_NAME} \
+
+########################################################################
 # udentify
 
 # udentify INCLUDEPATH
@@ -352,6 +375,7 @@ udentify_os_LIBS += \
 } # contains(UDENTIFY_OS,linux)
 
 udentify_base_LIBS += \
+$${udentity_LIBS} \
 $${utalas_LIBS} \
 $${ustara_LIBS} \
 $${urete_LIBS} \

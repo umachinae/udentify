@@ -73,7 +73,7 @@ $${udentify_FRAMEWORKS} \
 # udentify_exe LIBS
 #
 udentify_exe_LIBS += \
-$${udentify_LIBS} \
+$${udentify_rsa_LIBS} \
 
 ########################################################################
 # NO Qt

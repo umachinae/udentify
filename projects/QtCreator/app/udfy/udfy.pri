@@ -55,30 +55,34 @@ XOS_CONSOLE_MAIN_MAIN \
 # udfy HEADERS
 #
 udfy_HEADERS += \
-$${UNADIR_SRC}/xos/base/output.hpp \
-$${UNADIR_SRC}/xos/io/string/output.hpp \
-$${UNADIR_SRC}/xos/console/output.hpp \
+$${UDENTITY_SRC}/xos/io/output.hpp \
+$${UDENTITY_SRC}/xos/io/string/output.hpp \
+$${UDENTITY_SRC}/xos/io/crt/file/output.hpp \
+$${UDENTITY_SRC}/xos/io/console/output.hpp \
+$${UDENTITY_SRC}/xos/io/crypto/output.hpp \
 \
-$${UTALAS_SRC}/talas/crypto/output.hpp \
-$${UTALAS_SRC}/xos/protocol/udtp/base/output.hpp \
-$${UTALAS_SRC}/xos/protocol/udtp/client/output.hpp \
+$${UDENTITY_SRC}/xos/protocol/udtp/base/output.hpp \
+$${UDENTITY_SRC}/xos/protocol/udtp/client/output.hpp \
 \
 $${USTARA_SRC}/xos/app/console/network/sockets/protocol/http/base/main_opt.hpp \
 $${USTARA_SRC}/xos/app/console/network/sockets/protocol/http/base/main.hpp \
 \
-$${UTALAS_SRC}/xos/app/console/network/sockets/protocol/udttp/base/main_opt.hpp \
-$${UTALAS_SRC}/xos/app/console/network/sockets/protocol/udttp/base/main.hpp \
+$${USTARA_SRC}/xos/app/console/network/sockets/protocol/http/client/main_opt.hpp \
+$${USTARA_SRC}/xos/app/console/network/sockets/protocol/http/client/main.hpp \
 \
-$${UTALAS_SRC}/xos/app/console/network/sockets/protocol/udttp/client/main_opt.hpp \
-$${UTALAS_SRC}/xos/app/console/network/sockets/protocol/udttp/client/main.hpp \
+$${UDENTIFY_SRC}/xos/app/console/network/sockets/protocol/udttp/base/main_opt.hpp \
+$${UDENTIFY_SRC}/xos/app/console/network/sockets/protocol/udttp/base/main.hpp \
+\
+$${UDENTIFY_SRC}/xos/app/console/network/sockets/protocol/udttp/client/main_opt.hpp \
+$${UDENTIFY_SRC}/xos/app/console/network/sockets/protocol/udttp/client/main.hpp \
 
 # udfy SOURCES
 #
 udfy_SOURCES += \
-$${UTALAS_SRC}/xos/protocol/udtp/client/output.cpp \
+$${UDENTITY_SRC}/xos/protocol/udtp/client/output.cpp \
 \
-$${UTALAS_SRC}/xos/app/console/network/sockets/protocol/udttp/client/main_opt.cpp \
-$${UTALAS_SRC}/xos/app/console/network/sockets/protocol/udttp/client/main.cpp \
+$${UDENTIFY_SRC}/xos/app/console/network/sockets/protocol/udttp/client/main_opt.cpp \
+$${UDENTIFY_SRC}/xos/app/console/network/sockets/protocol/udttp/client/main.cpp \
 
 ########################################################################
 # udfy FRAMEWORKS
