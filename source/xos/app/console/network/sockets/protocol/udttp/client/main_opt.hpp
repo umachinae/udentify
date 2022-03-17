@@ -145,6 +145,36 @@ protected:
         return err;
     }
 
+    /// ...output_client_hello_message_run
+    virtual int output_client_hello_message_run(int argc, char_t** argv, char_t** env) {
+        int err = 0;
+        return err;
+    }
+    virtual int before_output_client_hello_message_run(int argc, char_t** argv, char_t** env) {
+        int err = 0;
+        return err;
+    }
+    virtual int after_output_client_hello_message_run(int argc, char_t** argv, char_t** env) {
+        int err = 0;
+        return err;
+    }
+    virtual int all_output_client_hello_message_run(int argc, char_t** argv, char_t** env) {
+        int err = 0;
+        if (!(err = before_output_client_hello_message_run(argc, argv, env))) {
+            int err2 = 0;
+            err = output_client_hello_message_run(argc, argv, env);
+            if ((err2 = after_output_client_hello_message_run(argc, argv, env))) {
+                if (!(err)) err = err2;
+            }
+        }
+        return err;
+    }
+    virtual int set_output_client_hello_message_run(int argc, char_t** argv, char_t** env) {
+        int err = 0;
+        run_ = &derives::all_output_client_hello_message_run;
+        return err;
+    }
+
     /// ...option...
     virtual int on_set_client_hello_message_option
     (const char_t* optarg, int argc, char_t**argv, char_t**env) {

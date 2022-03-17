@@ -106,6 +106,33 @@ protected:
         return err;
     }
 
+    /// ...output_client_hello_message_run
+    virtual int output_client_hello_message_run(int argc, char_t** argv, char_t** env) {
+        int err = 0;
+        output_t& output = this->output(); 
+        output.output_client_hello_message();
+        return err;
+    }
+
+    /// ...option...
+    virtual int on_set_client_hello_message_option
+    (const char_t* optarg, int argc, char_t**argv, char_t**env) {
+        int err = 0;
+        if ((optarg) && (optarg[0])) {
+            output_t& output = this->output(); 
+            output.on_set_client_hello_message_option(optarg);
+        }
+        return err;
+    }
+    virtual int on_file_input_option
+    (int optval, const char_t* optarg, const char_t* optname,
+     int optind, int argc, char_t**argv, char_t**env) {
+        int err = 0;
+        output_t& output = this->output(); 
+        output.set_on_set_file_literals();
+        return err;
+    }
+
 protected:
     string_t content_string_;
 }; /// class maint
