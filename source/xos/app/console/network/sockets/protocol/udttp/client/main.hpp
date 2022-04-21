@@ -71,6 +71,11 @@ protected:
     typedef typename extends::output_to_t output_to_t;
     typedef TStringOutput string_output_t;
 
+    typedef typename extends::content_t content_t;
+    typedef typename extends::response_t response_t;
+    typedef typename extends::request_method_t request_method_t;
+    typedef typename extends::request_t request_t;
+
     /// ...run
     int (derives::*run_)(int argc, char_t** argv, char_t** env);
     virtual int run(int argc, char_t** argv, char_t** env) {
@@ -111,6 +116,27 @@ protected:
         int err = 0;
         output_t& output = this->output(); 
         output.output_client_hello_message();
+        return err;
+    }
+
+    /// ...outout_response_content
+    virtual int outout_response_content(response_t &rs, int argc, char_t** argv, char_t** env) {
+        int err = 0;
+        const char_t* chars = 0; size_t length = 0;
+
+        if ((chars = rs.content_chars(length))) {
+            bool& verbose_output = this->verbose_output(); 
+            output_t& output = this->output(); 
+
+            this->outln(chars, length);
+            output.set_verbose_output(verbose_output);
+            output.unset_on_set_file_literals();
+            if (!(err = output.on_set_server_hello_message_option(chars))) {
+                output_to_t* old_output = output.unset_output_to();
+                output.output_server_hello();
+                output.set_output_to(old_output);
+            }
+        }
         return err;
     }
 

@@ -54,7 +54,7 @@ public:
     typedef typename extends::file_t file_t;
 
     /// constructor / destructor
-    maint(): run_(0), connect_port_(8448) {
+    maint(): run_(0), connect_port_(8448), verbose_output_(false) {
     }
     virtual ~maint() {
     }
@@ -122,9 +122,16 @@ protected:
         return err;
     }
 
-    /// output
+    /// ...output
     virtual output_t& output() const {
         return (output_t&)output_;
+    }
+    virtual bool& set_verbose_output(const bool& to) {
+        verbose_output_ = to;
+        return (bool&)verbose_output_;
+    }
+    virtual bool& verbose_output() const {
+        return (bool&)verbose_output_;
     }
 
     /// connect_port
@@ -134,6 +141,7 @@ protected:
 
 protected:
     output_t output_;
+    bool verbose_output_;
     short connect_port_;
 }; /// class maint
 typedef maint<> main;

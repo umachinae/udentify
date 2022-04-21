@@ -103,6 +103,11 @@ protected:
     typedef typename extends::output_t output_t;
     typedef typename extends::output_to_t output_to_t;
 
+    typedef typename extends::content_t content_t;
+    typedef typename extends::response_t response_t;
+    typedef typename extends::request_method_t request_method_t;
+    typedef typename extends::request_t request_t;
+
     /// ...run
     int (derives::*run_)(int argc, char_t** argv, char_t** env);
     virtual int run(int argc, char_t** argv, char_t** env) {
