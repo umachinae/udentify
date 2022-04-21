@@ -13,57 +13,69 @@
 # or otherwise) arising in any way out of the use of this software,
 # even if advised of the possibility of such damage.
 #
-#   File: libudentify.pri
+#   File: udentitycgi.pri
 #
 # Author: $author$
-#   Date: 2/24/2022
+#   Date: 4/7/2022
 #
-# generic QtCreator project .pri file for framework udentify static library libudentify
+# generic QtCreator project .pri file for framework udentify executable udentitycgi
 ########################################################################
 
 ########################################################################
-# libudentify
-XOS_LIB_UDENTIFY_VERSION_BUILD_DATE = 2/24/2022 #$$system(~/bin/utility/tdate)
+# udentitycgi
 
-# libudentify TARGET
+# udentitycgi TARGET
 #
-libudentify_TARGET = udentify
-libudentify_TEMPLATE = lib
-libudentify_CONFIG += staticlib
+udentitycgi_TARGET = udentitycgi
 
-# libudentify INCLUDEPATH
+# udentitycgi INCLUDEPATH
 #
-libudentify_INCLUDEPATH += \
+udentitycgi_INCLUDEPATH += \
 $${udentify_INCLUDEPATH} \
 
-# libudentify DEFINES
+# udentitycgi DEFINES
 #
-libudentify_DEFINES += \
+udentitycgi_DEFINES += \
 $${udentify_DEFINES} \
 DEFAULT_LOGGING_LEVELS_ERROR \
-XOS_LIB_UDENTIFY_VERSION_BUILD_DATE=$${XOS_LIB_UDENTIFY_VERSION_BUILD_DATE} \
+XOS_CONSOLE_MAIN_MAIN \
 
 ########################################################################
-# libudentify OBJECTIVE_HEADERS
+# udentitycgi OBJECTIVE_HEADERS
 #
-#libudentify_OBJECTIVE_HEADERS += \
-#$${UDENTIFY_SRC}/xos/lib/udentify/version.hh \
+#udentitycgi_OBJECTIVE_HEADERS += \
+#$${UDENTIFY_SRC}/xos/app/console/udentitycgi/main.hh \
 
-# libudentify OBJECTIVE_SOURCES
+# udentitycgi OBJECTIVE_SOURCES
 #
-#libudentify_OBJECTIVE_SOURCES += \
-#$${UDENTIFY_SRC}/xos/lib/udentify/version.mm \
-
-########################################################################
-# libudentify HEADERS
-#
-libudentify_HEADERS += \
-$${UDENTIFY_SRC}/xos/lib/udentify/version.hpp \
-
-# libudentify SOURCES
-#
-libudentify_SOURCES += \
-$${UDENTIFY_SRC}/xos/lib/udentify/version.cpp \
+#udentitycgi_OBJECTIVE_SOURCES += \
+#$${UDENTIFY_SRC}/xos/app/console/udentitycgi/main.mm \
 
 ########################################################################
+# udentitycgi HEADERS
+#
+udentitycgi_HEADERS += \
+$${UTALAS_SRC}/xos/app/console/network/protocol/udttp/cgi/main_opt.hpp \
+$${UTALAS_SRC}/xos/app/console/network/protocol/udttp/cgi/main.hpp \
+
+# udentitycgi SOURCES
+#
+udentitycgi_SOURCES += \
+$${UTALAS_SRC}/xos/app/console/network/protocol/udttp/cgi/main_opt.cpp \
+$${UTALAS_SRC}/xos/app/console/network/protocol/udttp/cgi/main.cpp \
+
+########################################################################
+# udentitycgi FRAMEWORKS
+#
+udentitycgi_FRAMEWORKS += \
+$${udentify_FRAMEWORKS} \
+
+# udentitycgi LIBS
+#
+udentitycgi_LIBS += \
+$${udentify_rsa_LIBS} \
+
+########################################################################
+# NO Qt
+QT -= gui core
 

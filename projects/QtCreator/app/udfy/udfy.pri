@@ -64,6 +64,8 @@ $${UDENTITY_SRC}/xos/io/crypto/output.hpp \
 $${UDENTITY_SRC}/xos/protocol/udtp/base/output.hpp \
 $${UDENTITY_SRC}/xos/protocol/udtp/client/output.hpp \
 \
+$${USTARA_SRC}/xos/app/console/network/sockets/protocol/xttp/client/main.hpp \
+\
 $${USTARA_SRC}/xos/app/console/network/sockets/protocol/http/base/main_opt.hpp \
 $${USTARA_SRC}/xos/app/console/network/sockets/protocol/http/base/main.hpp \
 \

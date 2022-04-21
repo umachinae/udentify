@@ -13,57 +13,69 @@
 # or otherwise) arising in any way out of the use of this software,
 # even if advised of the possibility of such damage.
 #
-#   File: libudentify.pri
+#   File: udentitycgicatch.pri
 #
 # Author: $author$
-#   Date: 2/24/2022
+#   Date: 4/7/2022
 #
-# generic QtCreator project .pri file for framework udentify static library libudentify
+# generic QtCreator project .pri file for framework udentify executable udentitycgicatch
 ########################################################################
 
 ########################################################################
-# libudentify
-XOS_LIB_UDENTIFY_VERSION_BUILD_DATE = 2/24/2022 #$$system(~/bin/utility/tdate)
+# udentitycgicatch
 
-# libudentify TARGET
+# udentitycgicatch TARGET
 #
-libudentify_TARGET = udentify
-libudentify_TEMPLATE = lib
-libudentify_CONFIG += staticlib
+udentitycgicatch_TARGET = udentitycgicatch
 
-# libudentify INCLUDEPATH
+# udentitycgicatch INCLUDEPATH
 #
-libudentify_INCLUDEPATH += \
+udentitycgicatch_INCLUDEPATH += \
 $${udentify_INCLUDEPATH} \
 
-# libudentify DEFINES
+# udentitycgicatch DEFINES
 #
-libudentify_DEFINES += \
+udentitycgicatch_DEFINES += \
 $${udentify_DEFINES} \
 DEFAULT_LOGGING_LEVELS_ERROR \
-XOS_LIB_UDENTIFY_VERSION_BUILD_DATE=$${XOS_LIB_UDENTIFY_VERSION_BUILD_DATE} \
+XOS_CONSOLE_MAIN_MAIN \
 
 ########################################################################
-# libudentify OBJECTIVE_HEADERS
+# udentitycgicatch OBJECTIVE_HEADERS
 #
-#libudentify_OBJECTIVE_HEADERS += \
-#$${UDENTIFY_SRC}/xos/lib/udentify/version.hh \
+#udentitycgicatch_OBJECTIVE_HEADERS += \
+#$${UDENTIFY_SRC}/xos/app/console/udentitycgicatch/main.hh \
 
-# libudentify OBJECTIVE_SOURCES
+# udentitycgicatch OBJECTIVE_SOURCES
 #
-#libudentify_OBJECTIVE_SOURCES += \
-#$${UDENTIFY_SRC}/xos/lib/udentify/version.mm \
-
-########################################################################
-# libudentify HEADERS
-#
-libudentify_HEADERS += \
-$${UDENTIFY_SRC}/xos/lib/udentify/version.hpp \
-
-# libudentify SOURCES
-#
-libudentify_SOURCES += \
-$${UDENTIFY_SRC}/xos/lib/udentify/version.cpp \
+#udentitycgicatch_OBJECTIVE_SOURCES += \
+#$${UDENTIFY_SRC}/xos/app/console/udentitycgicatch/main.mm \
 
 ########################################################################
+# udentitycgicatch HEADERS
+#
+udentitycgicatch_HEADERS += \
+$${UDENTIFY_SRC}/xos/app/console/udentity/cgi/catcher/main_opt.hpp \
+$${UDENTIFY_SRC}/xos/app/console/udentity/cgi/catcher/main.hpp \
+
+# udentitycgicatch SOURCES
+#
+udentitycgicatch_SOURCES += \
+$${UDENTIFY_SRC}/xos/app/console/udentity/cgi/catcher/main_opt.cpp \
+$${UDENTIFY_SRC}/xos/app/console/udentity/cgi/catcher/main.cpp \
+
+########################################################################
+# udentitycgicatch FRAMEWORKS
+#
+udentitycgicatch_FRAMEWORKS += \
+$${udentify_FRAMEWORKS} \
+
+# udentitycgicatch LIBS
+#
+udentitycgicatch_LIBS += \
+$${udentify_LIBS} \
+
+########################################################################
+# NO Qt
+QT -= gui core
 

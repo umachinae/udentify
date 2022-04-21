@@ -13,57 +13,70 @@
 # or otherwise) arising in any way out of the use of this software,
 # even if advised of the possibility of such damage.
 #
-#   File: libudentify.pri
+#   File: udentitycgi.pro
 #
 # Author: $author$
-#   Date: 2/24/2022
+#   Date: 4/7/2022
 #
-# generic QtCreator project .pri file for framework udentify static library libudentify
+# os specific QtCreator project .pro file for framework udentify executable udentitycgi
 ########################################################################
-
-########################################################################
-# libudentify
-XOS_LIB_UDENTIFY_VERSION_BUILD_DATE = 2/24/2022 #$$system(~/bin/utility/tdate)
-
-# libudentify TARGET
 #
-libudentify_TARGET = udentify
-libudentify_TEMPLATE = lib
-libudentify_CONFIG += staticlib
-
-# libudentify INCLUDEPATH
+# Debug: udentify/build/os/QtCreator/Debug/bin/udentitycgi
+# Release: udentify/build/os/QtCreator/Release/bin/udentitycgi
+# Profile: udentify/build/os/QtCreator/Profile/bin/udentitycgi
 #
-libudentify_INCLUDEPATH += \
-$${udentify_INCLUDEPATH} \
+include(../../../../../build/QtCreator/udentify.pri)
+include(../../../../QtCreator/udentify.pri)
+include(../../udentify.pri)
+include(../../../../QtCreator/app/udentitycgi/udentitycgi.pri)
 
-# libudentify DEFINES
-#
-libudentify_DEFINES += \
-$${udentify_DEFINES} \
-DEFAULT_LOGGING_LEVELS_ERROR \
-XOS_LIB_UDENTIFY_VERSION_BUILD_DATE=$${XOS_LIB_UDENTIFY_VERSION_BUILD_DATE} \
+TARGET = $${udentitycgi_TARGET}
 
 ########################################################################
-# libudentify OBJECTIVE_HEADERS
+# INCLUDEPATH
 #
-#libudentify_OBJECTIVE_HEADERS += \
-#$${UDENTIFY_SRC}/xos/lib/udentify/version.hh \
+INCLUDEPATH += \
+$${udentitycgi_INCLUDEPATH} \
 
-# libudentify OBJECTIVE_SOURCES
-#
-#libudentify_OBJECTIVE_SOURCES += \
-#$${UDENTIFY_SRC}/xos/lib/udentify/version.mm \
+# DEFINES
+# 
+DEFINES += \
+$${udentitycgi_DEFINES} \
 
 ########################################################################
-# libudentify HEADERS
+# OBJECTIVE_HEADERS
 #
-libudentify_HEADERS += \
-$${UDENTIFY_SRC}/xos/lib/udentify/version.hpp \
+OBJECTIVE_HEADERS += \
+$${udentitycgi_OBJECTIVE_HEADERS} \
 
-# libudentify SOURCES
+# OBJECTIVE_SOURCES
 #
-libudentify_SOURCES += \
-$${UDENTIFY_SRC}/xos/lib/udentify/version.cpp \
+OBJECTIVE_SOURCES += \
+$${udentitycgi_OBJECTIVE_SOURCES} \
+
+########################################################################
+# HEADERS
+#
+HEADERS += \
+$${udentitycgi_HEADERS} \
+$${udentitycgi_OBJECTIVE_HEADERS} \
+
+# SOURCES
+#
+SOURCES += \
+$${udentitycgi_SOURCES} \
+
+########################################################################
+# FRAMEWORKS
+#
+FRAMEWORKS += \
+$${udentitycgi_FRAMEWORKS} \
+
+# LIBS
+#
+LIBS += \
+$${udentitycgi_LIBS} \
+$${FRAMEWORKS} \
 
 ########################################################################
 
