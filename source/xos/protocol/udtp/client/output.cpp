@@ -13,36 +13,29 @@
 /// or otherwise) arising in any way out of the use of this software, 
 /// even if advised of the possibility of such damage.
 ///
-///   File: main_opt.cpp
+///   File: output.cpp
 ///
 /// Author: $author$
-///   Date: 7/1/2022
+///   Date: 3/3/2022
 ///////////////////////////////////////////////////////////////////////
-#include "xos/app/console/network/sockets/protocol/udttp/client/main_opt.hpp"
+#include "xos/protocol/udtp/client/output.hpp"
 
-#if !defined(XOS_APP_CONSOLE_NETWORK_SOCKETS_PROTOCOL_UDTTP_CLIENT_MAIN_OPT_INSTANCE)
-///#define XOS_APP_CONSOLE_NETWORK_SOCKETS_PROTOCOL_UDTTP_CLIENT_MAIN_OPT_INSTANCE
-#endif /// !defined(XOS_APP_CONSOLE_NETWORK_SOCKETS_PROTOCOL_UDTTP_CLIENT_MAIN_OPT_NSTANCE)
+#if !defined(XOS_PROTOCOL_UDTP_CLIENT_OUTPUT_INSTANCE)
+///#define XOS_PROTOCOL_UDTP_CLIENT_OUTPUT_INSTANCE
+#endif /// !defined(XOS_PROTOCOL_UDTP_CLIENT_OUTPUT_INSTANCE)
 
 namespace xos {
-namespace app {
-namespace console {
-namespace network {
-namespace sockets {
 namespace protocol {
-namespace udttp {
+namespace udtp {
 namespace client {
 
-/// class main_opt
-#if defined(XOS_APP_CONSOLE_NETWORK_SOCKETS_PROTOCOL_UDTTP_CLIENT_MAIN_OPT_INSTANCE)
-static main_opt the_main_opt;
-#endif /// defined(XOS_APP_CONSOLE_NETWORK_SOCKETS_PROTOCOL_UDTTP_CLIENT_MAIN_OPT_INSTANCE)
+///  Class: outputt
+#if defined(XOS_PROTOCOL_UDTP_CLIENT_OUTPUT_INSTANCE)
+static output the_output;
+#endif /// defined(XOS_PROTOCOL_UDTP_CLIENT_OUTPUT_INSTANCE)
+
 
 } /// namespace client
-} /// namespace udttp
+} /// namespace udtp
 } /// namespace protocol
-} /// namespace sockets
-} /// namespace network
-} /// namespace console
-} /// namespace app
 } /// namespace xos

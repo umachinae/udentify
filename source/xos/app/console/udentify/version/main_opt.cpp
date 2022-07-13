@@ -16,33 +16,33 @@
 ///   File: main_opt.cpp
 ///
 /// Author: $author$
-///   Date: 7/1/2022
+///   Date: 5/11/2022
 ///////////////////////////////////////////////////////////////////////
-#include "xos/app/console/network/sockets/protocol/udttp/client/main_opt.hpp"
+#include "xos/app/console/udentify/version/main_opt.hpp"
 
-#if !defined(XOS_APP_CONSOLE_NETWORK_SOCKETS_PROTOCOL_UDTTP_CLIENT_MAIN_OPT_INSTANCE)
-///#define XOS_APP_CONSOLE_NETWORK_SOCKETS_PROTOCOL_UDTTP_CLIENT_MAIN_OPT_INSTANCE
-#endif /// !defined(XOS_APP_CONSOLE_NETWORK_SOCKETS_PROTOCOL_UDTTP_CLIENT_MAIN_OPT_NSTANCE)
+#if !defined(XOS_APP_CONSOLE_UDENTIFY_VERSION_MAIN_OPT_INSTANCE)
+///#define XOS_APP_CONSOLE_UDENTIFY_VERSION_MAIN_OPT_INSTANCE
+#endif /// !defined(XOS_APP_CONSOLE_UDENTIFY_VERSION_MAIN_OPT_INSTANCE)
+
+#if defined(XOS_APP_CONSOLE_UDENTIFY_VERSION_MAIN_OPT_INSTANCE)
+#if !defined(NO_XOS_CONSOLE_MAIN_MAIN)
+#include "xos/console/main_main.cpp"
+#endif /// !defined(NO_XOS_CONSOLE_MAIN_MAIN)
+#endif /// defined(XOS_APP_CONSOLE_UDENTIFY_VERSION_MAIN_OPT_INSTANCE)
 
 namespace xos {
 namespace app {
 namespace console {
-namespace network {
-namespace sockets {
-namespace protocol {
-namespace udttp {
-namespace client {
+namespace udentify {
+namespace version {
 
-/// class main_opt
-#if defined(XOS_APP_CONSOLE_NETWORK_SOCKETS_PROTOCOL_UDTTP_CLIENT_MAIN_OPT_INSTANCE)
+/// class main_optt
+#if defined(XOS_APP_CONSOLE_UDENTIFY_VERSION_MAIN_OPT_INSTANCE)
 static main_opt the_main_opt;
-#endif /// defined(XOS_APP_CONSOLE_NETWORK_SOCKETS_PROTOCOL_UDTTP_CLIENT_MAIN_OPT_INSTANCE)
+#endif /// defined(XOS_APP_CONSOLE_UDENTIFY_VERSION_MAIN_OPT_INSTANCE)
 
-} /// namespace client
-} /// namespace udttp
-} /// namespace protocol
-} /// namespace sockets
-} /// namespace network
+} /// namespace version
+} /// namespace udentify
 } /// namespace console
 } /// namespace app
 } /// namespace xos
