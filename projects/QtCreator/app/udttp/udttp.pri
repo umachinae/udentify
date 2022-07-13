@@ -13,70 +13,69 @@
 # or otherwise) arising in any way out of the use of this software,
 # even if advised of the possibility of such damage.
 #
-#   File: udentify.pro
+#   File: udttp.pri
 #
 # Author: $author$
-#   Date: 4/30/2022
+#   Date: 6/2/2022, 7/11/2022
 #
-# os specific QtCreator project .pro file for framework udentify executable udentify
+# generic QtCreator project .pri file for framework udentify executable udttp
 ########################################################################
-#
-# Debug: udentify/build/os/QtCreator/Debug/bin/udentify
-# Release: udentify/build/os/QtCreator/Release/bin/udentify
-# Profile: udentify/build/os/QtCreator/Profile/bin/udentify
-#
-include(../../../../../build/QtCreator/udentify.pri)
-include(../../../../QtCreator/udentify.pri)
-include(../../udentify.pri)
-include(../../../../QtCreator/app/udentify/udentify.pri)
-
-TARGET = $${udentify_exe_TARGET}
 
 ########################################################################
-# INCLUDEPATH
-#
-INCLUDEPATH += \
-$${udentify_exe_INCLUDEPATH} \
+# udttp
 
-# DEFINES
-# 
-DEFINES += \
-$${udentify_exe_DEFINES} \
+# udttp TARGET
+#
+udttp_TARGET = udttp
+
+# udttp INCLUDEPATH
+#
+udttp_INCLUDEPATH += \
+$${udentify_INCLUDEPATH} \
+
+# udttp DEFINES
+#
+udttp_DEFINES += \
+$${udentify_DEFINES} \
+DEFAULT_LOGGING_LEVELS_ERROR \
+XOS_CONSOLE_MAIN_MAIN \
 
 ########################################################################
-# OBJECTIVE_HEADERS
+# udttp OBJECTIVE_HEADERS
 #
-OBJECTIVE_HEADERS += \
-$${udentify_exe_OBJECTIVE_HEADERS} \
+#udttp_OBJECTIVE_HEADERS += \
+#$${UDENTIFY_SRC}/xos/app/console/network/sockets/protocol/udttp/client/main.hh \
 
-# OBJECTIVE_SOURCES
+# udttp OBJECTIVE_SOURCES
 #
-OBJECTIVE_SOURCES += \
-$${udentify_exe_OBJECTIVE_SOURCES} \
-
-########################################################################
-# HEADERS
-#
-HEADERS += \
-$${udentify_exe_HEADERS} \
-$${udentify_exe_OBJECTIVE_HEADERS} \
-
-# SOURCES
-#
-SOURCES += \
-$${udentify_exe_SOURCES} \
+#udttp_OBJECTIVE_SOURCES += \
+#$${UDENTIFY_SRC}/xos/app/console/network/sockets/protocol/udttp/client/main.mm \
 
 ########################################################################
-# FRAMEWORKS
+# udttp HEADERS
 #
-FRAMEWORKS += \
-$${udentify_exe_FRAMEWORKS} \
+udttp_HEADERS += \
+$${UDENTIFY_SRC}/xos/app/console/network/sockets/protocol/udttp/client/main_opt.hpp \
+$${UDENTIFY_SRC}/xos/app/console/network/sockets/protocol/udttp/client/main.hpp \
 
-# LIBS
+# udttp SOURCES
 #
-LIBS += \
-$${udentify_exe_LIBS} \
-$${FRAMEWORKS} \
+udttp_SOURCES += \
+$${UDENTIFY_SRC}/xos/app/console/network/sockets/protocol/udttp/client/main_opt.cpp \
+$${UDENTIFY_SRC}/xos/app/console/network/sockets/protocol/udttp/client/main.cpp \
 
 ########################################################################
+# udttp FRAMEWORKS
+#
+udttp_FRAMEWORKS += \
+$${udentify_rsa_FRAMEWORKS} \
+
+# udttp LIBS
+#
+udttp_LIBS += \
+$${udentify_rsa_LIBS} \
+
+########################################################################
+# NO Qt
+QT -= gui core
 

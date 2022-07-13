@@ -16,7 +16,7 @@
 #   File: udentify.pri
 #
 # Author: $author$
-#   Date: 2/24/2022
+#   Date: 4/30/2022, 7/11/2022
 #
 # generic QtCreator project .pri file for framework udentify executable udentify
 ########################################################################
@@ -44,45 +44,23 @@ XOS_CONSOLE_MAIN_MAIN \
 # udentify_exe OBJECTIVE_HEADERS
 #
 #udentify_exe_OBJECTIVE_HEADERS += \
-#$${UDENTIFY_SRC}/xos/app/console/udentify/main.hh \
+#$${UDENTIFY_SRC}/xos/app/console/network/sockets/protocol/udttp/client/main.hh \
 
 # udentify_exe OBJECTIVE_SOURCES
 #
 #udentify_exe_OBJECTIVE_SOURCES += \
-#$${UDENTIFY_SRC}/xos/app/console/udentify/main.mm \
+#$${UDENTIFY_SRC}/xos/app/console/network/sockets/protocol/udttp/client/main.mm \
 
 ########################################################################
 # udentify_exe HEADERS
 #
 udentify_exe_HEADERS += \
-$${UDENTITY_SRC}/xos/io/output.hpp \
-$${UDENTITY_SRC}/xos/io/string/output.hpp \
-$${UDENTITY_SRC}/xos/io/crt/file/output.hpp \
-$${UDENTITY_SRC}/xos/io/console/output.hpp \
-$${UDENTITY_SRC}/xos/io/crypto/output.hpp \
-\
-$${UDENTITY_SRC}/xos/protocol/udtp/base/output.hpp \
-$${UDENTITY_SRC}/xos/protocol/udtp/client/output.hpp \
-\
-$${USTARA_SRC}/xos/app/console/network/sockets/protocol/xttp/client/main.hpp \
-\
-$${USTARA_SRC}/xos/app/console/network/sockets/protocol/http/base/main_opt.hpp \
-$${USTARA_SRC}/xos/app/console/network/sockets/protocol/http/base/main.hpp \
-\
-$${USTARA_SRC}/xos/app/console/network/sockets/protocol/http/client/main_opt.hpp \
-$${USTARA_SRC}/xos/app/console/network/sockets/protocol/http/client/main.hpp \
-\
-$${UDENTIFY_SRC}/xos/app/console/network/sockets/protocol/udttp/base/main_opt.hpp \
-$${UDENTIFY_SRC}/xos/app/console/network/sockets/protocol/udttp/base/main.hpp \
-\
 $${UDENTIFY_SRC}/xos/app/console/network/sockets/protocol/udttp/client/main_opt.hpp \
 $${UDENTIFY_SRC}/xos/app/console/network/sockets/protocol/udttp/client/main.hpp \
 
 # udentify_exe SOURCES
 #
 udentify_exe_SOURCES += \
-$${UDENTITY_SRC}/xos/protocol/udtp/client/output.cpp \
-\
 $${UDENTIFY_SRC}/xos/app/console/network/sockets/protocol/udttp/client/main_opt.cpp \
 $${UDENTIFY_SRC}/xos/app/console/network/sockets/protocol/udttp/client/main.cpp \
 

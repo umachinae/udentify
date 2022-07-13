@@ -16,7 +16,7 @@
 #   File: libudentify.pro
 #
 # Author: $author$
-#   Date: 2/24/2022
+#   Date: 4/3/2022
 #
 # os specific QtCreator project .pro file for framework udentify static library libudentify
 ########################################################################

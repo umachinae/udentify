@@ -13,69 +13,69 @@
 # or otherwise) arising in any way out of the use of this software,
 # even if advised of the possibility of such damage.
 #
-#   File: udentify.pro
+#   File: ursa.pro
 #
 # Author: $author$
-#   Date: 4/30/2022
+#   Date: 5/12/2022
 #
-# os specific QtCreator project .pro file for framework udentify executable udentify
+# os specific QtCreator project .pro file for framework udentify executable ursa
 ########################################################################
 #
-# Debug: udentify/build/os/QtCreator/Debug/bin/udentify
-# Release: udentify/build/os/QtCreator/Release/bin/udentify
-# Profile: udentify/build/os/QtCreator/Profile/bin/udentify
+# Debug: udentify/build/os/QtCreator/Debug/bin/ursa
+# Release: udentify/build/os/QtCreator/Release/bin/ursa
+# Profile: udentify/build/os/QtCreator/Profile/bin/ursa
 #
 include(../../../../../build/QtCreator/udentify.pri)
 include(../../../../QtCreator/udentify.pri)
 include(../../udentify.pri)
-include(../../../../QtCreator/app/udentify/udentify.pri)
+include(../../../../QtCreator/app/ursa/ursa.pri)
 
-TARGET = $${udentify_exe_TARGET}
+TARGET = $${ursa_TARGET}
 
 ########################################################################
 # INCLUDEPATH
 #
 INCLUDEPATH += \
-$${udentify_exe_INCLUDEPATH} \
+$${ursa_INCLUDEPATH} \
 
 # DEFINES
 # 
 DEFINES += \
-$${udentify_exe_DEFINES} \
+$${ursa_DEFINES} \
 
 ########################################################################
 # OBJECTIVE_HEADERS
 #
 OBJECTIVE_HEADERS += \
-$${udentify_exe_OBJECTIVE_HEADERS} \
+$${ursa_OBJECTIVE_HEADERS} \
 
 # OBJECTIVE_SOURCES
 #
 OBJECTIVE_SOURCES += \
-$${udentify_exe_OBJECTIVE_SOURCES} \
+$${ursa_OBJECTIVE_SOURCES} \
 
 ########################################################################
 # HEADERS
 #
 HEADERS += \
-$${udentify_exe_HEADERS} \
-$${udentify_exe_OBJECTIVE_HEADERS} \
+$${ursa_HEADERS} \
+$${ursa_OBJECTIVE_HEADERS} \
 
 # SOURCES
 #
 SOURCES += \
-$${udentify_exe_SOURCES} \
+$${ursa_SOURCES} \
 
 ########################################################################
 # FRAMEWORKS
 #
 FRAMEWORKS += \
-$${udentify_exe_FRAMEWORKS} \
+$${ursa_FRAMEWORKS} \
 
 # LIBS
 #
 LIBS += \
-$${udentify_exe_LIBS} \
+$${ursa_LIBS} \
 $${FRAMEWORKS} \
 
 ########################################################################

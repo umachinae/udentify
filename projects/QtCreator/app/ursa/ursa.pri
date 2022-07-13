@@ -13,70 +13,73 @@
 # or otherwise) arising in any way out of the use of this software,
 # even if advised of the possibility of such damage.
 #
-#   File: udentify.pro
+#   File: ursa.pri
 #
 # Author: $author$
-#   Date: 4/30/2022
+#   Date: 5/12/2022
 #
-# os specific QtCreator project .pro file for framework udentify executable udentify
+# generic QtCreator project .pri file for framework udentify executable ursa
 ########################################################################
-#
-# Debug: udentify/build/os/QtCreator/Debug/bin/udentify
-# Release: udentify/build/os/QtCreator/Release/bin/udentify
-# Profile: udentify/build/os/QtCreator/Profile/bin/udentify
-#
-include(../../../../../build/QtCreator/udentify.pri)
-include(../../../../QtCreator/udentify.pri)
-include(../../udentify.pri)
-include(../../../../QtCreator/app/udentify/udentify.pri)
-
-TARGET = $${udentify_exe_TARGET}
 
 ########################################################################
-# INCLUDEPATH
-#
-INCLUDEPATH += \
-$${udentify_exe_INCLUDEPATH} \
+# ursa
 
-# DEFINES
-# 
-DEFINES += \
-$${udentify_exe_DEFINES} \
+# ursa TARGET
+#
+ursa_TARGET = ursa
+
+# ursa INCLUDEPATH
+#
+ursa_INCLUDEPATH += \
+$${udentify_INCLUDEPATH} \
+
+# ursa DEFINES
+#
+ursa_DEFINES += \
+$${udentify_DEFINES} \
+DEFAULT_LOGGING_LEVELS_ERROR \
+XOS_CONSOLE_MAIN_MAIN \
 
 ########################################################################
-# OBJECTIVE_HEADERS
+# ursa OBJECTIVE_HEADERS
 #
-OBJECTIVE_HEADERS += \
-$${udentify_exe_OBJECTIVE_HEADERS} \
+#ursa_OBJECTIVE_HEADERS += \
+#$${UDENTIFY_SRC}/xos/app/console/crypto/rsa/client/main.hh \
 
-# OBJECTIVE_SOURCES
+# ursa OBJECTIVE_SOURCES
 #
-OBJECTIVE_SOURCES += \
-$${udentify_exe_OBJECTIVE_SOURCES} \
-
-########################################################################
-# HEADERS
-#
-HEADERS += \
-$${udentify_exe_HEADERS} \
-$${udentify_exe_OBJECTIVE_HEADERS} \
-
-# SOURCES
-#
-SOURCES += \
-$${udentify_exe_SOURCES} \
+#ursa_OBJECTIVE_SOURCES += \
+#$${UDENTIFY_SRC}/xos/app/console/crypto/rsa/client/main.mm \
 
 ########################################################################
-# FRAMEWORKS
+# ursa HEADERS
 #
-FRAMEWORKS += \
-$${udentify_exe_FRAMEWORKS} \
+ursa_HEADERS += \
+$${UCIFRA_SRC}/xos/crypto/random/prime/small_primes.hpp \
+\
+$${UDENTIFY_SRC}/xos/app/console/crypto/rsa/client/main_opt.hpp \
+$${UDENTIFY_SRC}/xos/app/console/crypto/rsa/client/main.hpp \
 
-# LIBS
+# ursa SOURCES
 #
-LIBS += \
-$${udentify_exe_LIBS} \
-$${FRAMEWORKS} \
+ursa_SOURCES += \
+$${UCIFRA_SRC}/xos/crypto/random/prime/small_primes.cpp \
+\
+$${UDENTIFY_SRC}/xos/app/console/crypto/rsa/client/main_opt.cpp \
+$${UDENTIFY_SRC}/xos/app/console/crypto/rsa/client/main.cpp \
 
 ########################################################################
+# ursa FRAMEWORKS
+#
+ursa_FRAMEWORKS += \
+$${udentify_FRAMEWORKS} \
+
+# ursa LIBS
+#
+ursa_LIBS += \
+$${udentify_rsa_LIBS} \
+
+########################################################################
+# NO Qt
+QT -= gui core
 

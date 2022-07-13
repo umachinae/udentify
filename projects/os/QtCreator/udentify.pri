@@ -16,12 +16,12 @@
 #   File: udentify.pri
 #
 # Author: $author$
-#   Date: 2/24/2022
+#   Date: 4/3/2022, 7/13/2022
 #
 # os specific QtCreator project .pri file for framework udentify
 ########################################################################
 # Repository Depends: vmachinae
-# Depends: ubn;ump;urostra;unadir;ufila;ucrono;ucifra;urete;ustara;umedusade;utalas;udentity
+# Depends: ubn;ump;urostra;unadir;ufila;ucrono;ucifra;urete;ustara;utalas;udentity
 
 UNAME = $$system(uname)
 
@@ -180,6 +180,7 @@ ucifra_LIBS += \
 -L$${UCIFRA_LIB}/lib$${UCIFRA_LIB_NAME} \
 -l$${UCIFRA_LIB_NAME} \
 
+
 ########################################################################
 # ubn
 UBN_THIRDPARTY_PKG_MAKE_BLD = $${UBN_THIRDPARTY_PKG}/build/$${UDENTIFY_BUILD}/$${BUILD_CONFIG}
@@ -195,6 +196,7 @@ UBN_PRJ_BLD = $${OTHER_BLD}/$${UBN_PRJ}/build/$${UDENTIFY_BUILD}/QtCreator/$${BU
 #UBN_LIB = $${UBN_PKG_BLD}/lib
 #UBN_LIB = $${UBN_PRJ_BLD}/lib
 #UBN_LIB = $${UDENTIFY_LIB}
+#UBN_LIB_NAME = $${UBN_NAME}
 UBN_LIB = $${UCIFRA_LIB}
 
 # ubn LIBS
@@ -202,6 +204,7 @@ UBN_LIB = $${UCIFRA_LIB}
 ubn_LIBS += \
 -L$${UBN_LIB}/lib$${UBN_LIB_NAME} \
 -l$${UBN_LIB_NAME} \
+
 
 ########################################################################
 # ump
@@ -218,6 +221,7 @@ UMP_PRJ_BLD = $${OTHER_BLD}/$${UMP_PRJ}/build/$${UDENTIFY_BUILD}/QtCreator/$${BU
 #UMP_LIB = $${UMP_PKG_BLD}/lib
 #UMP_LIB = $${UMP_PRJ_BLD}/lib
 #UMP_LIB = $${UDENTIFY_LIB}
+#UMP_LIB_NAME = $${UMP_NAME}
 UMP_LIB = $${UCIFRA_LIB}
 
 # ump LIBS
@@ -229,6 +233,7 @@ ump_LIBS += \
 -l$${UMP_LIB_NAME}n \
 -L$${UMP_LIB}/lib$${UMP_LIB_NAME} \
 -l$${UMP_LIB_NAME} \
+
 
 ########################################################################
 # urete
@@ -279,30 +284,6 @@ ustara_LIBS += \
 
 
 ########################################################################
-# umedusade
-UMEDUSADE_THIRDPARTY_PKG_MAKE_BLD = $${UMEDUSADE_THIRDPARTY_PKG}/build/$${UDENTIFY_BUILD}/$${BUILD_CONFIG}
-UMEDUSADE_THIRDPARTY_PRJ_MAKE_BLD = $${OTHER_BLD}/$${UMEDUSADE_THIRDPARTY_PRJ}/build/$${UDENTIFY_BUILD}/$${BUILD_CONFIG}
-UMEDUSADE_THIRDPARTY_PKG_BLD = $${UMEDUSADE_THIRDPARTY_PKG}/build/$${UDENTIFY_BUILD}/QtCreator/$${BUILD_CONFIG}
-UMEDUSADE_THIRDPARTY_PRJ_BLD = $${OTHER_BLD}/$${UMEDUSADE_THIRDPARTY_PRJ}/build/$${UDENTIFY_BUILD}/QtCreator/$${BUILD_CONFIG}
-UMEDUSADE_PKG_BLD = $${OTHER_BLD}/$${UMEDUSADE_PKG}/build/$${UDENTIFY_BUILD}/QtCreator/$${BUILD_CONFIG}
-UMEDUSADE_PRJ_BLD = $${OTHER_BLD}/$${UMEDUSADE_PRJ}/build/$${UDENTIFY_BUILD}/QtCreator/$${BUILD_CONFIG}
-#UMEDUSADE_LIB = $${UMEDUSADE_THIRDPARTY_PKG_MAKE_BLD}/lib
-#UMEDUSADE_LIB = $${UMEDUSADE_THIRDPARTY_PRJ_MAKE_BLD}/lib
-#UMEDUSADE_LIB = $${UMEDUSADE_THIRDPARTY_PKG_BLD}/lib
-#UMEDUSADE_LIB = $${UMEDUSADE_THIRDPARTY_PRJ_BLD}/lib
-UMEDUSADE_LIB = $${UMEDUSADE_PKG_BLD}/lib
-#UMEDUSADE_LIB = $${UMEDUSADE_PRJ_BLD}/lib
-#UMEDUSADE_LIB = $${UDENTIFY_LIB}
-UMEDUSADE_LIB_NAME = $${UMEDUSADE_NAME}
-
-# umedusade LIBS
-#
-umedusade_LIBS += \
--L$${UMEDUSADE_LIB}/lib$${UMEDUSADE_LIB_NAME} \
--l$${UMEDUSADE_LIB_NAME} \
-
-
-########################################################################
 # utalas
 UTALAS_THIRDPARTY_PKG_MAKE_BLD = $${UTALAS_THIRDPARTY_PKG}/build/$${UDENTIFY_BUILD}/$${BUILD_CONFIG}
 UTALAS_THIRDPARTY_PRJ_MAKE_BLD = $${OTHER_BLD}/$${UTALAS_THIRDPARTY_PRJ}/build/$${UDENTIFY_BUILD}/$${BUILD_CONFIG}
@@ -324,6 +305,7 @@ UTALAS_LIB_NAME = $${UTALAS_NAME}
 utalas_LIBS += \
 -L$${UTALAS_LIB}/lib$${UTALAS_LIB_NAME} \
 -l$${UTALAS_LIB_NAME} \
+
 
 ########################################################################
 # udentity
@@ -385,17 +367,15 @@ $${ufila_LIBS} \
 $${unadir_LIBS} \
 $${urostra_LIBS} \
 
-udentify_bnmp_LIBS += \
-$${ump_LIBS} \
-$${ubn_LIBS} \
-
 udentify_LIBS += \
 $${udentify_base_LIBS} \
-$${udentify_os_LIBS} \
 $${build_udentify_LIBS} \
+$${udentify_os_LIBS} \
 
 udentify_rsa_LIBS += \
 $${udentify_base_LIBS} \
-$${udentify_bnmp_LIBS} \
-$${udentify_os_LIBS} \
+$${ump_LIBS} \
+$${ubn_LIBS} \
 $${build_udentify_LIBS} \
+$${udentify_os_LIBS} \
+

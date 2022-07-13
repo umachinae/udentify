@@ -13,69 +13,69 @@
 # or otherwise) arising in any way out of the use of this software,
 # even if advised of the possibility of such damage.
 #
-#   File: udentify.pro
+#   File: udttp.pro
 #
 # Author: $author$
-#   Date: 4/30/2022
+#   Date: 6/2/2022
 #
-# os specific QtCreator project .pro file for framework udentify executable udentify
+# os specific QtCreator project .pro file for framework udentify executable udttp
 ########################################################################
 #
-# Debug: udentify/build/os/QtCreator/Debug/bin/udentify
-# Release: udentify/build/os/QtCreator/Release/bin/udentify
-# Profile: udentify/build/os/QtCreator/Profile/bin/udentify
+# Debug: udentify/build/os/QtCreator/Debug/bin/udttp
+# Release: udentify/build/os/QtCreator/Release/bin/udttp
+# Profile: udentify/build/os/QtCreator/Profile/bin/udttp
 #
 include(../../../../../build/QtCreator/udentify.pri)
 include(../../../../QtCreator/udentify.pri)
 include(../../udentify.pri)
-include(../../../../QtCreator/app/udentify/udentify.pri)
+include(../../../../QtCreator/app/udttp/udttp.pri)
 
-TARGET = $${udentify_exe_TARGET}
+TARGET = $${udttp_TARGET}
 
 ########################################################################
 # INCLUDEPATH
 #
 INCLUDEPATH += \
-$${udentify_exe_INCLUDEPATH} \
+$${udttp_INCLUDEPATH} \
 
 # DEFINES
 # 
 DEFINES += \
-$${udentify_exe_DEFINES} \
+$${udttp_DEFINES} \
 
 ########################################################################
 # OBJECTIVE_HEADERS
 #
 OBJECTIVE_HEADERS += \
-$${udentify_exe_OBJECTIVE_HEADERS} \
+$${udttp_OBJECTIVE_HEADERS} \
 
 # OBJECTIVE_SOURCES
 #
 OBJECTIVE_SOURCES += \
-$${udentify_exe_OBJECTIVE_SOURCES} \
+$${udttp_OBJECTIVE_SOURCES} \
 
 ########################################################################
 # HEADERS
 #
 HEADERS += \
-$${udentify_exe_HEADERS} \
-$${udentify_exe_OBJECTIVE_HEADERS} \
+$${udttp_HEADERS} \
+$${udttp_OBJECTIVE_HEADERS} \
 
 # SOURCES
 #
 SOURCES += \
-$${udentify_exe_SOURCES} \
+$${udttp_SOURCES} \
 
 ########################################################################
 # FRAMEWORKS
 #
 FRAMEWORKS += \
-$${udentify_exe_FRAMEWORKS} \
+$${udttp_FRAMEWORKS} \
 
 # LIBS
 #
 LIBS += \
-$${udentify_exe_LIBS} \
+$${udttp_LIBS} \
 $${FRAMEWORKS} \
 
 ########################################################################
